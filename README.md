@@ -46,15 +46,7 @@ https://next.typesafe.cn/ 账号：test  密码：test
 
 默认账号密码为 admin/admin 。
 
-## 问题反馈
 
-- Issues
-- 微信群 加我微信拉你进群
-
-<img src="wx.png" width="300"  height="auto"/>
-
-- QQ群 938145268
-- Telegram https://t.me/next_terminal
 
 ## 安全问题
 
@@ -64,14 +56,3 @@ https://next.typesafe.cn/ 账号：test  密码：test
 
 Next Terminal 使用 [AGPL-3.0](./LICENSE) 开源协议，请自觉遵守。
 
-## 赞助支持
-
-如果你觉得 `next-terminal` 这款程序还不错，并且想要购买服务器，可以从这里点击购买腾讯云服务器。
-
-- 2022新春优惠抢先看 https://curl.qcloud.com/JN4kmKnL
-- 限时秒杀活动 https://curl.qcloud.com/ZioWA15a
-- 云服务器全球购 https://curl.qcloud.com/7QwcihVF
-- 星星海SA2云服务器 https://curl.qcloud.com/Iaih7ty0
-- 新客专属福利 https://curl.qcloud.com/MwPg07VQ
-- 企业上云特惠活动 https://curl.qcloud.com/skIyRHv6
-- 云开发CloudBase https://curl.qcloud.com/hpFpcHSB
