@@ -5,6 +5,7 @@ import {Button, Dropdown, Layout, Menu, Popconfirm} from "antd";
 import {Link, Route, Switch} from "react-router-dom";
 import Dashboard from "./components/dashboard/Dashboard";
 import Asset from "./components/asset/Asset";
+import DiaTest from "./components/dia/DiaTest";
 import Access from "./components/access/Access";
 import User from "./components/user/User";
 import OnlineSession from "./components/session/OnlineSession";
@@ -60,6 +61,7 @@ import MyFile from "./components/asset/MyFile";
 import Strategy from "./components/user/Strategy";
 import AccessGateway from "./components/asset/AccessGateway";
 import MyAsset from "./components/asset/MyAsset";
+import MyDia from "./components/dia/MyDia";
 
 const {Footer, Content, Sider} = Layout;
 
@@ -303,6 +305,13 @@ class App extends Component {
                                                     个人中心
                                                 </Link>
                                             </Menu.Item>
+                                            <SubMenu key='diatest' title='拨测管理' icon={<CloudServerOutlined/>}>
+                                                <Menu.Item key="dia" icon={<DesktopOutlined/>}>
+                                                    <Link to={'/dia'}>
+                                                        Api拨测
+                                                    </Link>
+                                                </Menu.Item>
+                                            </SubMenu>
                                             <Menu.Item key="setting" icon={<SettingOutlined/>}>
                                                 <Link to={'/setting'}>
                                                     系统设置
@@ -346,6 +355,7 @@ class App extends Component {
                                         <Route path="/user" component={User}/>
                                         <Route path="/user-group" component={UserGroup}/>
                                         <Route path="/asset" component={Asset}/>
+                                        <Route path="/dia" component={DiaTest}/>
                                         <Route path="/credential" component={Credential}/>
                                         <Route path="/dynamic-command" component={DynamicCommand}/>
                                         <Route path="/batch-command" component={BatchCommand}/>
