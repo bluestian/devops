@@ -235,22 +235,6 @@ class DiaTest extends Component {
         result.data['id'] = undefined;
         await this.showModal('复制资产', result.data);
     }
-
-    async connTest(id) {
-        message.info({content: '正在测试中...', key: id, duration: 5});
-        let result = await request.post(`/assets/${id}/tcping`);
-        if (result.code !== 1) {
-            message.error({content: result.message, key: id, duration: 10});
-            return;
-        }
-        if (result['data']['active'] === true) {
-            message.success({content: '连通性测试完成，当前资产在线。', key: id, duration: 3});
-        } else {
-            message.warning({content: `连通性测试完成，当前资产离线，原因: ${result['data']['message']}。`, key: id, duration: 10});
-        }
-        this.loadTableData(this.state.queryParams);
-    }
-
     async showModal(title, asset = {}) {
         // 并行请求
         let getCredentials = request.get('/credentials');
@@ -415,9 +399,9 @@ class DiaTest extends Component {
                 return index + 1;
             }
         }, {
-            title: '资产名称',
-            dataIndex: 'name',
-            key: 'name',
+            title: '拨测名称',
+            dataIndex: 'diaName',
+            key: 'diaName',
             render: (name, record) => {
                 let short = name;
                 if (short && short.length > 15) {
@@ -442,9 +426,9 @@ class DiaTest extends Component {
             },
             sorter: true,
         }, {
-            title: '协议',
-            dataIndex: 'protocol',
-            key: 'protocol',
+            title: '请求方法',
+            dataIndex: 'requestMath',
+            key: 'requestMath',
             render: (text, record) => {
                 const title = `${record['ip'] + ':' + record['port']}`
                 return (
@@ -454,9 +438,9 @@ class DiaTest extends Component {
                 )
             }
         }, {
-            title: '网络',
-            dataIndex: 'network',
-            key: 'network',
+            title: 'url路径',
+            dataIndex: 'urlRoute',
+            key: 'urlRoute',
             render: (text, record) => {
                 return `${record['ip'] + ':' + record['port']}`;
             }
